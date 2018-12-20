@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes" user-scalable="no"/>
+   <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="Img/images.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="Img/images.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="Img/images.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="Img/images.png">
+    <link rel="shortcut icon" type="image/x-icon" href="Img/images.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="Style/style.css" rel="stylesheet" media="(max-width: 800px)" type="text/css">
+    <header>
+            <div class="container-fluid presentation">
+                    <p class="size-head">Rucker Park Legend Tournament</p>
+                    <p class="size-head2">3 x 3</p>
+           </div> 
+    </header>
+    
+    <body>
+<div id="app">
+    <div id="index" v-if="target === 'index'">
+            <div class="but-log">
+                    <a class="login text-warning" id="login"><i class="fas fa-sign-in-alt"></i></a>
+                </div>
+                
+                <div class="nav fixed-bottom">
+                    <nav class="nav bg-dark nav-size">
+                        <a class="nav-link text-warning" v-on:click="takeValue('index')"><i class="fas fa-home icon-size"></i></a>
+                        <a class="nav-link" v-on:click="takeValue('teams')"><i class="fas fa-address-card colors icon-size"></i></a>
+                        <a class="nav-link" v-on:click="takeValue('statsp')"><i class="fas fa-chart-bar colors icon-size"></i></a>
+                        <a class="nav-link" v-on:click="takeValue('gamesInfo')"><i class="fas fa-basketball-ball colors icon-size"></i></a>
+                        <a class="nav-link" v-on:click="takeValue('chat')"><i class="fas fa-comments colors icon-size"></i></a>
+                      </nav>
+                </div>
+                   <!-- <div class="container-fluid presentation">
+                             <p class="size-head">Rucker Park Legend Tournament</p>
+                             <p class="size-head2">3 x 3</p>
+                    </div> -->
+                    <div class="home-intro">
+                    <div class="intro-flex">
+                         <p class="style-span">Introduccion</p>
+                    </div>
+                    <div class=" home-text">
+                        <div class="move-text" >
+                           <!-- <div class="container ball-icon"><img src="Img/vector-clip-art-free-download-6 - copia.png"></div>  -->
+                           <p>Rucker Park is a basketball court in Harlem, Manhattan, New York City, at 155th Street. 
+                                 Many who played at the park in the Rucker Tournament achieved a level of fame for their abilities, and several have gone on to play in the National Basketball Association (NBA).</p>
+                         </div>   
+                         </div>
+                    <div class="intro-flex">
+                    <p class="style-span2">History</p>
+                    </div>
+                    <div class="home-text2">
+                        <div class="move-text">
+                                <p>Rucker Park is not just a court with two hoops. If you want to read more about that..<a v-on:click="takeValue('history')"> Read more..</a></p>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="intro-flex">
+                    <div class="style-span">
+                        <div class="move-text">
+                            <!-- <i class="fal fa-basketball-ball ball-icon"></i>--><p>Photo Gallery</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="gallery2">
+                            <P>Photo gallery through the history of rucker park...<a v-on:click="takeValue('photog')"><div class="icon"><i class="fas fa-arrow-circle-right size-icon"></i></div></a></P>
+                    </div>
+                    <div class="intro-flex">
+                    <div class="style-span">
+                        <div class="move-text">
+                        <p>Video Gallery</p>
+                        </div>
+                    </div>
+                </div>
+                    <div class="gallery2">
+                        <p>The best players on the planet have played in Rucker Park...<a v-on:click="takeValue('videog')"><div class="icon"><i class="fas fa-arrow-circle-right size-icon"></i></div></a></p>
+                        </div>
+                    <div class="empty"></div>
+    </div>
+    <div id="rucker-history" v-if="target === 'history'">
+            <div class="history-rucker">
+                    <p class="stats">History about Rucker Park</p>
+                    <p>According to Bleacher Report, there is one basketball court, and one alone, that is “without a doubt the most famous basketball court on the planet.” 
+                        The outdoor, two-hoop court of Rucker Park, complete with five rows of bleachers, may not look so famous from the outside. 
+                        But over time it has been touched by the shoes of some of the NBA’s greats, and witnessed some of the most intense street games of all time.</p>
+                    <p>
+                        Rucker Park, in northeastern Harlem, was first built in 1950 by Holcombe Rucker, the playground director of Harlem’s parks. Rucker opened the court in order to start up a legendary basketball tournament amongst Harlem’s greatest street ballers, nicknamed the “Rucker League”, with a generous mission of providing both basketball skills and educational opportunity to the low-income youth of the neighborhood. To encourage academic growth, Rucker gave playing priority to students with higher scores on their report cards, and his generous educational efforts eventually granted college scholarships to 700 Harlem youth. With the motto of “each one, teach one”, Rucker donated most of his spare time to help with homework and teach reading to the kids.
+                        But Rucker’s legacy wasn’t limited to education: Rucker Park soon became the one-stop shop for emerging basketball players to gain their street cred and boost their playing ability to the NBA level. In over six decades of existence, the Rucker League’s tournaments have been competed in by greats such as Wilt Chamberlain, Dr. J, Kareem Abdul-Jabbar, and, most recently, Kyrie Irving and Kevin Durant.
+                        Over the years, Rucker Park has not only hosted some of basketball’s greatest players, but also some of its greatest moves. At a time before the NBA was filled with slam dunks and crossover dribbles, Rucker Park was the international epicenter of jams and jukes.
+                        As of today, Rucker Park is open to the public and is often occupied throughout the day with a match of street ball. Since the fifties, the Rucker League has held onto its educational initiative and currently offers mentoring, tutoring, and career planning to Harlem’s economically disadvantaged children. In fact, the late Holcombe Rucker has created so much positive change in the community that his grandson is currently asking the NBA to admit his granddad into the Basketball Hall of Fame.
+                    </p>
+                </div>
+                
+                <div class="nav fixed-bottom">
+                <nav class="nav bg-dark nav-size">
+                        <a class="nav-link text-warning" v-on:click="takeValue('index')"><i class="fas fa-home icon-size"></i></a>
+                        <a class="nav-link" v-on:click="takeValue('teams')"><i class="fas fa-address-card colors icon-size"></i></a>
+                        <a class="nav-link" v-on:click="takeValue('statsp')"><i class="fas fa-chart-bar colors icon-size"></i></a>
+                        <a class="nav-link" v-on:click="takeValue('gamesInfo')"><i class="fas fa-basketball-ball colors icon-size"></i></a>
+                        <a class="nav-link" v-on:click="takeValue('chat')"><i class="fas fa-comments colors"></i></a>
+                      </nav>
+                </div> 
+    </div>
+    <div id="teams" v-if="target === 'teams'">
+            <div class="nav fixed-bottom">
+                    <nav class="nav bg-dark nav-size">
+                            <a class="nav-link" v-on:click="takeValue('index')"><i class="fas fa-home colors icon-size"></i></a>
+                            <a class="nav-link text-warning" v-on:click="takeValue('teams')"><i class="fas fa-address-card icon-size"></i></a>
+                            <a class="nav-link" v-on:click="takeValue('statsp')"><i class="fas fa-chart-bar colors icon-size"></i></a>
+                            <a class="nav-link" v-on:click="takeValue('gamesInfo')"><i class="fas fa-basketball-ball colors icon-size"></i></a>
+                            <a class="nav-link" v-on:click="takeValue('chat')"><i class="fas fa-comments colors icon-size"></i></a>
+                          </nav>
+                    </div>
+            
+            <div class="stats">
+                <p class="style-span">TEAMS</p>
+            </div> 
+            <div class="logo-flex">
+                <div class="move"> <img src="Img/logo123.jpeg" class="logos"> <div class="team-info">DAKVILLE VENOM<a v-on:click="takeValue('teamsp', 'Dakville Venom')"><div class="info-butt">Info.</div></a></div></div>
+                <div class="move"> <img src="Img/logo122.png" class="logos"><div class="team-info">JBLE RAPTOR<a v-on:click="takeValue('teamsp', 'JBLE Raptor')"><div class="info-butt">Info.</div></a></div></div>
+                <div class="move"> <img src="Img/logo42.png" class="logos"><div class="team-info">GOLD COAST TITANS <a v-on:click="takeValue('teamsp', 'Gold Coast Titans')"><div class="info-butt">Info.</div></a></div></div>
+                <div class="move"> <img src="Img/logo52.jpg" class="logos"><div class="team-info">SWL. SCORPIONS<a v-on:click="takeValue('teamsp', 'Swl. Scorpions')"><div class="info-butt">Info.</div></a></div></div>
+                <div class="move"> <img src="Img/logo62.jpg" class="logos"><div class="team-info">BSKT. TROJANS<a v-on:click="takeValue('teamsp', 'Bskt. Trojans')"><div class="info-butt">Info.</div></a></div></div>
+                <div class="move"> <img src="Img/logo72.jpg" class="logos"><div class="team-info">WOLVERINE BSKT.<a v-on:click="takeValue('teamsp', 'Wolverine Bskt.')"><div class="info-butt">Info.</div></a></div></div>
+            </div>
+            
+            <div class="empty"></div>
+    
+    </div>
+    <div id="team-players" v-if="target === 'teamsp'">
+        
+        <div v-for="player in teamPlayers">
+            <div class="team-info2">
+                <p style="color: white">{{player.name}}</p>
+            </div>
+            <div class="info-player">
+                <p>TEAM: {{player.atem}}</p>
+                <p>AGE: {{player.age}}</p>
+                <p>FROM: {{player.from}}</p>
+            </div>
+            <div class="move2">
+                <div class="move"> <img :src="player.url_img" class="logos2" alt=""></div>
+            <div class="info-stats">
+                <p>PPG: {{player.ppg}}</p>
+                <p>RPG: {{player.rpg}}</p>
+                <p>APG: {{player.apg}}</p>
+            </div>
+
+           </div>
+        </div>
+
+        <div class="nav fixed-bottom">
+                    <nav class="nav bg-dark nav-size">
+                            <a class="nav-link" v-on:click="takeValue('index')"><i class="fas fa-home colors icon-size"></i></a>
+                            <a class="nav-link text-warning" v-on:click="takeValue('teams')"><i class="fas fa-address-card icon-size"></i></a>
+                            <a class="nav-link" v-on:click="takeValue('statsp')"><i class="fas fa-chart-bar colors icon-size"></i></a>
+                            <a class="nav-link" v-on:click="takeValue('gamesInfo')"><i class="fas fa-basketball-ball colors icon-size"></i></a>
+                            <a class="nav-link" v-on:click="takeValue('chat')"><i class="fas fa-comments colors icon-size"></i></a>
+                          </nav>
+                    </div>
+                        
+                         <div class="empty"></div>
+    </div>
+    <div id="stats-player" v-if="target === 'statsp'">
+            <div class="nav fixed-bottom">
+                    <nav class="nav bg-dark nav-size">
+                            <a class="nav-link" v-on:click="takeValue('index')"><i class="fas fa-home colors icon-size"></i></a>
+                            <a class="nav-link" v-on:click="takeValue('teams')"><i class="fas fa-address-card colors icon-size"></i></a>
+                            <a class="nav-link text-warning" v-on:click="takeValue('statsp')"><i class="fas fa-chart-bar icon-size"></i></a>
+                            <a class="nav-link"  v-on:click="takeValue('gamesInfo')"><i class="fas fa-basketball-ball colors icon-size"></i></a>
+                            <a class="nav-link"  v-on:click="takeValue('chat')"><i class="fas fa-comments colors icon-size"></i></a>
+                          </nav>
+                    </div>
+                       
+                    <div class="stats">
+                             <p class="style-span">STATS</p>
+                    </div>
+                    <div class="stat-button">
+                        <button type="button" class="btn btn-warning">Players</button>
+                        <a v-on:click="takeValue('statst')"><button type="button" class="btn btn-dark">Teams</button></a>
+                    </div> 
+                    <div class="table info-games">
+                    <table class="">
+                            <thead>
+                                <tr>
+                                    <th>Player</th>
+                                    <th>GAMES</th>
+                                    <th>PPG</th>
+                                    <th>RPG</th>
+                                    <th>ASP</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody2">
+    
+                            </tbody>
+    
+                                                   
+                        </table>
+                    </div>
+            <div class="empty"></div> 
+    </div>
+    <div id="stats-team" v-if="target === 'statst'">
+            <div class="nav fixed-bottom">
+                    <nav class="nav bg-dark nav-size">
+                            <a class="nav-link" v-on:click="takeValue('index')"><i class="fas fa-home colors icon-size"></i></a>
+                            <a class="nav-link" v-on:click="takeValue('teams')"><i class="fas fa-address-card colors icon-size"></i></a>
+                            <a class="nav-link text-warning" v-on:click="takeValue('statsp')"><i class="fas fa-chart-bar icon-size"></i></a>
+                            <a class="nav-link" v-on:click="takeValue('gamesInfo')"><i class="fas fa-basketball-ball colors icon-size"></i></a>
+                            <a class="nav-link" v-on:click="takeValue('chat')"><i class="fas fa-comments colors icon-size"></i></a>
+                          </nav>
+                    </div>
+                       
+    
+                        
+                        <div class="stats">
+                             <p class="style-span">STATS</p>
+                        </div>
+                        <div class="stat-button">
+                                <a v-on:click="takeValue('statsp')"><button type="button" class="btn btn-dark">Players</button></a>
+                                <button type="button" class="btn btn-warning">Teams</button>
+                        </div> 
+
+                        <div class="table info-games">
+                            <table class="">
+                                    <thead>
+                                        <tr>
+                                            <th>TEAM</th>
+                                            <th>Total P.</th>
+                                            <th>3%</th>
+                                            <th>FG%</th>
+                                            <th>FT%</th>
+                                            <th>PPP</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbody3">
+            
+                                    </tbody>
+            
+                                                           
+                                </table>
+                            </div>
+                        <div class="empty"></div>
+    </div>
+    <div id="games-info" v-if="target === 'gamesInfo'">
+            <div class="nav fixed-bottom">
+                    <nav class="nav bg-dark nav-size">
+                        <a class="nav-link" v-on:click="takeValue('index')"><i class="fas fa-home colors icon-size"></i></a>
+                        <a class="nav-link" v-on:click="takeValue('teams')"><i class="fas fa-address-card colors icon-size"></i></a>
+                        <a class="nav-link" v-on:click="takeValue('statsp')"><i class="fas fa-chart-bar colors icon-size"></i></a>
+                        <a class="nav-link text-warning" v-on:click="takeValue('gamesInfo')"><i class="fas fa-basketball-ball icon-size"></i></a>
+                        <a class="nav-link" v-on:click="takeValue('chat')"><i class="fas fa-comments colors icon-size"></i></a>
+                    </nav>
+                </div>
+                
+                <div class="intro-flex">
+                    <p class="style-span">General Info</p>
+                </div>
+                <div class="general-info">
+                        <p>In this tournament 6 teams participate, each team will play a total of 10 games.
+                         The two best teams will play a final to 3 games to know who will be the king of rucker park</p>
+                </div>
+                <div class="intro-flex">
+                    <p class="style-span">GAMES</p>
+                </div>
+                <div class="games-list">
+                    <div class="games1">
+                        <ul>
+                            <li>Swl. Scorpions VS JBLE Raptor</li>
+                            <li>Bskt. Trojans VS Dakville Venom</li>
+                            <li>Gold Coast Titans VS Wolverine Bskt.</li>
+                        </ul>
+                    </div>
+                    <div class="games2">
+                        <ul>
+                            <li>Wolverine Bskt. VS Bskt. Trojans</li>
+                            <li>JBLE Raptor VS Goldt Coast Titans</li>
+                            <li>Dakville Venom VS Swl. Scorpions</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="table info-games">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Teams</th>
+                                <th>Games</th>
+                                <th>V</th>
+                                <th>L</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+
+                        </tbody>
+
+                                               
+                    </table>
+                </div>
+                
+                        
+                <div class="empty"></div>
+        
+    </div>
+    <div id="photo-gallery" v-if="target === 'photog'">
+        <div class="stats">
+             <p>Rucker Park in the Past</p>
+        </div>
+    <div class="big-p">
+        <div class="photo-g">
+            <img src="Img/Drj-rucker.jpg" alt="" class="size-img">
+         </div>
+        <div class="photo-g"> -->
+            <img src="Img/old.jpg" alt="" class="size-img">
+        </div>
+        <div class="photo-g"> -->
+                <img src="Img/images (3).jpg" alt="" class="size-img">
+            </div>
+        <div class="photo-g"> -->
+                <img src="Img/Rucker70.jpg" alt="" class="size-img">
+        </div>
+        <div class="stats2">
+                <p>Rucker Park actually</p>
+           </div> 
+           <div class="photo-g"> -->
+                <img src="Img/bb.2.jpg" alt="" class="size-img">
+        </div>
+        <div class="photo-g"> -->
+                <img src="Img/20130724_JON_LOPEZ_DYCKMAN0703.jpg" alt="" class="size-img">
+        </div>
+        <div class="photo-g"> -->
+                <img src="Img/images (2).jpg" alt="" class="size-img">
+        </div> 
+        <div class="photo-g"> -->
+                <img src="Img/Rucker_park2.jpg" alt="" class="size-img">
+        </div>       
+     </div>
+     
+            <div class="nav fixed-bottom">
+                <nav class="nav bg-dark nav-size">
+                        <a class="nav-link text-warning" v-on:click="takeValue('index')"><i class="fas fa-home icon-size"></i></a>
+                        <a class="nav-link" v-on:click="takeValue('teams')"><i class="fas fa-address-card colors icon-size"></i></a>
+                        <a class="nav-link" v-on:click="takeValue('statsp')"><i class="fas fa-chart-bar colors icon-size"></i></a>
+                        <a class="nav-link" v-on:click="takeValue('gamesInfo')"><i class="fas fa-basketball-ball colors icon-size"></i></a>
+                        <a class="nav-link" v-on:click="takeValue('chat')"><i class="fas fa-comments colors icon-size"></i></a>
+                </nav>
+            </div>
+            <div class="empty"></div>
+    </div>
+    <div id="video-gallery" v-if="target === 'videog'">
+        <div class="video-g">
+                <iframe width="150" height="100"  src="https://www.youtube.com/embed/zxIN_b-vhNQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="150" height="100" src="https://www.youtube.com/embed/jK6OPqHpyWo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-g">
+                <iframe width="150" height="100" src="https://www.youtube.com/embed/K70VvU3IUqA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-g">
+                <iframe width="150" height="100" src="https://www.youtube.com/embed/F9As38X2s30" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="150" height="100" src="https://www.youtube.com/embed/UfQQMLJAKOI?start=11" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+            <div class="nav fixed-bottom">
+                    <nav class="nav bg-dark nav-size">
+                            <a class="nav-link text-warning" v-on:click="takeValue('index')"><i class="fas fa-home icon-size"></i></a>
+                            <a class="nav-link" v-on:click="takeValue('teams')"><i class="fas fa-address-card colors icon-size"></i></a>
+                            <a class="nav-link" v-on:click="takeValue('statsp')"><i class="fas fa-chart-bar colors icon-size"></i></a>
+                            <a class="nav-link" v-on:click="takeValue('gamesInfo')"><i class="fas fa-basketball-ball colors icon-size"></i></a>
+                            <a class="nav-link" v-on:click="takeValue('chat')"><i class="fas fa-comments colors"></i></a>
+                          </nav>
+                    </div>
+    </div>
+    <div id="login" v-if="target === 'login'">
+            <div class="but-log">
+                    <i class="fas fa-sign-in-alt"></i>
+                  </div>
+                  <!-- <div class="size-form"> -->
+                  <form class="size-form">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                      </div>
+                      <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                  <!-- </div> -->
+                    
+                  
+                  <div class="nav fixed-bottom">
+                  <nav class="nav bg-dark nav-size">
+                          <a class="nav-link text-warning" v-on:click="takeValue('index')"><i class="fas fa-home icon-size"></i></a>
+                          <a class="nav-link" v-on:click="takeValue('teams')"><i class="fas fa-address-card colors icon-size"></i></a>
+                          <a class="nav-link" v-on:click="takeValue('statsp')"><i class="fas fa-chart-bar colors icon-size"></i></a>
+                          <a class="nav-link" v-on:click="takeValue('gamesInfo')"><i class="fas fa-basketball-ball colors icon-size"></i></a>
+                          <a class="nav-link" v-on:click="takeValue('chat')"><i class="fas fa-comments colors icon-size"></i></a>
+                        </nav>
+                  </div> 
+    </div>
+    <div id="chat" v-show="target === 'chat'">
+           <div class="home-move"> 
+            <a class="nav-link text-warning" v-on:click="takeValue('index')"><i class="fas fa-home icon-size"></i></a>
+           </div>
+           <!-- <div class="move-butt" >
+            <button  class="button is-info style-butt"><i class="fas fa-sign-in-alt"></i></button>
+           </div> -->
+            <div class="chat" style="color:white">
+                    <div id="posts" class="box">
+                      Loading posts...
+                    </div>
+                
+                    <div class="inputs fixed-bottom">
+                      <input id="textInput" class="input" type="text" placeholder="Your message...">
+                    <!-- <div class="buttonSpace" > -->
+                        <!-- <button id="login" class="button is-info">Login!</button> -->
+                        <button id="create-post" class="button is-primary style-butt"><i class="fas fa-share-square"></i></button>
+                    <!-- </div> -->
+                </div>
+             </div>
+        <!-- <div class="nav fixed-bottom">
+            <nav class="nav bg-dark nav-size">
+                <a class="nav-link" v-on:click="takeValue('index')"><i class="fas fa-home colors icon-size"></i></a>
+                <a class="nav-link" v-on:click="takeValue('teams')"><i class="fas fa-address-card colors icon-size"></i></a>
+                <a class="nav-link" v-on:click="takeValue('statsp')"><i class="fas fa-chart-bar colors icon-size"></i></a>
+                <a class="nav-link" v-on:click="takeValue('gamesInfo')"><i class="fas fa-basketball-ball colors icon-size"></i></a>
+                <a class="nav-link text-warning" v-on:click="takeValue('chat')"><i class="fas fa-comments icon-size"></i></a>
+            </nav>
+        </div>  -->
+    </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDJ2JhjZeV6bJbVlNCIs6biFQ4glzU2g6Q",
+    authDomain: "ruckerpark-373e1.firebaseapp.com",
+    databaseURL: "https://ruckerpark-373e1.firebaseio.com",
+    projectId: "ruckerpark-373e1",
+    storageBucket: "ruckerpark-373e1.appspot.com",
+    messagingSenderId: "968432742489"
+  };
+  firebase.initializeApp(config);
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<!-- <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDLLdG-lpIotX_B780geFwRav9kJ7hbGjI",
+            authDomain: "appchat-9d6eb.firebaseapp.com",
+            databaseURL: "https://appchat-9d6eb.firebaseio.com",
+            projectId: "appchat-9d6eb",
+            storageBucket: "appchat-9d6eb.appspot.com",
+            messagingSenderId: "978730684569"
+        };
+        firebase.initializeApp(config);
+    </script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="info.js"></script>
+    <script src="Script/rucker-script.js"></script>
+    <script src="Script/rucker.js"></script>
+    <script src="Script/chat.js"></script>
+</body>
+</html>
